@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="top">
+
+            <div class="banner">
+                <div class='typing'>
+                    <h1 class="text"></h1>
+                </div>
+            </div>
+
+            <header>
+                <nav>
+                    <a href="#top">Home</a>
+                    <a href="#About">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#project">Project</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </header>
+
+        </div>
+
+        <div id="About">
+            <div class="a-left">
+                <h1>About We</h1>
+            </div>
+
+            <div class="a-right">
+                <h1>노력하는 사람들</h1>
+                <br>
+                <p>저희는 이 프로젝트를 준비하면 많은 시련과 역경이 있었지만, 그 모든 시련을<br>
+                    이겨내고 이 사이트에 그동안 배운 것을 쏟아부었으며 모두의 노력과 열정이 깃들어 있는 사이트입니다.</p>
+            </div>
+        </div>
+
+        <div id="skills">
+            <h1 class="sk">Skils</h1>
+            <h2 class="sk2">main-skils</h2>
+            <div class="gallery">
+                <img src="img/js.png" alt="">
+                <img src="img/html.png" alt="">
+                <img src="img/css.png" alt="">
+            </div>
+        </div>
+        <div id="project">
+            <h1 class="pr">Project</h1>
+            <div class="box">
+                <div class="left">
+                    <a href="#"><img src="img/pr1.png" alt=""></a>
+                </div>
+                <div class="right">
+                    <h1>Vans</h1>
+                    <br>
+                    <br>
+                    <br>
+                    <h3>모방 사이트 : 쇼핑몰</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <p>개발 기간 :2023 / 9 / 17 ~</p>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Vans 쇼핑몰 모방사이트 제작</p>
+                    <br>
+                    <br>
+                    <i>#신발 #Vans #모방사이트</i>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="left2">
+                    <a href="#"><img src="img/pr2.png" alt=""></a>
+                </div>
+                <div class="right2">
+                    <h1>Levice</h1>
+                    <br>
+                    <br>
+                    <br>
+                    <h3>모방 사이트 : 의류 쇼핑몰</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <p>개발 기간:2023 / 10 / 15 ~</p>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Levice 의류 쇼핑몰 모방사이트 제작</p>
+                    <br>
+                    <br>
+                    <i>#의류 #청바지 #쇼핑몰 #모방사이트</i>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <h1 class="ct">CONTACT!</h1>
+            <h1 class="ct2">Email : gkrbs@gmail.com</h1>
+            <a href="https://www.instagram.com/phhhhk._.17/"><img src="img/instagram.png" alt=""></a>
+        </div>
+
+    </div>
+
+    <script>
+        const $text = document.querySelector(".typing .text");
+
+        // 글자 모음
+        const letters = [
+            "INDEX팀의 포트폴리오입니다",
+        ];
+
+        // 글자 입력 속도
+        const speed = 150;
+        let i = 0;
+
+        // 타이핑 효과
+        const typing = async () => {
+            const letter = letters[i].split("");
+
+            while (letter.length) {
+                await wait(speed);
+                $text.innerHTML += letter.shift();
+            }
+
+            // 잠시 대기
+            await wait(800);
+
+        }
+
+        // 딜레이 기능 ( 마이크로초 )
+        function wait(ms) {
+            return new Promise(res => setTimeout(res, ms))
+        }
+
+        // 초기 실행
+        setTimeout(typing, 1500);
+    </script>
+</body>
+
+</html>
